@@ -28,9 +28,9 @@ public class CachingBreedFetcher implements BreedFetcher {
         if(cache.containsKey(breed)){
             return cache.get(breed);
         }
+        callsMade++;
         try{
             List<String> subBreeds = fetcher.getSubBreeds(breed);
-            callsMade++;
             cache.put(breed, subBreeds);
             return subBreeds;
         }catch(BreedNotFoundException e) {
