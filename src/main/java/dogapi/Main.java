@@ -10,7 +10,7 @@ public class Main {
         try {
             int result = getNumberOfSubBreeds(breed, breedFetcher);
             System.out.println(breed + " has " + result + " sub breeds");
-        }catch(BreedFetcher.BreedNotFoundException e){
+        }catch(Exception e){
             System.out.println(breed + " not found");
         }
 
@@ -18,7 +18,7 @@ public class Main {
         try {
             int result = getNumberOfSubBreeds(breed, breedFetcher);
             System.out.println(breed + " has " + result + " sub breeds");
-        }catch(BreedFetcher.BreedNotFoundException e){
+        }catch(Exception e){
             System.out.println(breed + " not found");
         }
     }
@@ -31,8 +31,7 @@ public class Main {
      * @return the number of sub breeds. Zero should be returned if there are no sub breeds
      * returned by the fetcher
      */
-    public static int getNumberOfSubBreeds(String breed, BreedFetcher breedFetcher)
-            throws BreedFetcher.BreedNotFoundException{
+    public static int getNumberOfSubBreeds(String breed, BreedFetcher breedFetcher) {
         // TODO Task 3 implement this code so that it is entirely consistent with its provided documentation.
         try {
             List<String> subBreeds = breedFetcher.getSubBreeds(breed);
