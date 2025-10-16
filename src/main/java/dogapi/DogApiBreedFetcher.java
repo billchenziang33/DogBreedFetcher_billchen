@@ -30,7 +30,7 @@ public class DogApiBreedFetcher implements BreedFetcher {
         //      to refer to the examples of using OkHttpClient from the last lab,
         //      as well as the code for parsing JSON responses.
         // return statement included so that the starter code can compile and run.
-        String url = "https://dog.ceo/api/breed/" + breed +"/list";
+        String url = "https://dog.ceo/api/breed/" + breed + "/list";
 
         Request request = new Request.Builder().url(url).build();
 
